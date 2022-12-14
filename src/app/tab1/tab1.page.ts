@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { iosTransitionAnimation, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private navCtrl: NavController
+  ) { }
+
+  goToFormsPage() {
+    this.navCtrl.navigateForward('/forms', { animation: iosTransitionAnimation });
+  }
 
 }

@@ -1,0 +1,100 @@
+:host {
+	--week-calendar-cell-height: 100px;
+}
+
+.custom-day-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 54px;
+}
+
+.calendar-event-inner {
+    overflow: hidden;
+    background-color: #edf9ff;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    line-height: 15px;
+    text-align: initial;
+    border: 1px solid #46c1f0;;
+
+    p.name {
+        // color: #fff;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 750px) {
+    .calendar-event-inner {
+        font-size: 11px;
+    }
+}
+
+// .calendar-event-inner {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     background-color: #edf9ff;
+// }
+
+// .custom-day-header {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     height: 54px;
+// }
+
+
+
+
+
+::ng-deep calendar {
+
+    weekview {
+        .calendar-event {
+            padding: 0 2px;
+        }
+        .calendar-cell {
+            height: var(--week-calendar-cell-height);
+          
+        }
+    }
+    
+    .weekview-allday-table {
+        display: none;
+    }
+
+
+    ion-slides.slides-container {
+        // overflow: scroll;
+
+        .swiper-slide:not(:first-child)  {
+            // width: 700px !important;
+
+
+            
+        }
+
+        // .swiper-slide:not(.swiper-slide-active) {
+        //     display: none;
+        // }
+        
+    }
+
+    .weekview-normal-event-container {
+        margin-top: 72px;
+    }
+
+    // .calendar-event {
+    //     background-color: #edf9ff;
+    //     border: 1px solid #fff;
+    // }
+
+    
+}

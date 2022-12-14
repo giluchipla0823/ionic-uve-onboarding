@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
+
     children: [
       {
         path: 'tab1',
@@ -35,5 +36,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

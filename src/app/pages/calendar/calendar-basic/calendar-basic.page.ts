@@ -232,7 +232,7 @@ export class CalendarBasicPage implements OnInit {
       endOffset,
     }
 
-
+    console.log('TEST  01');
   }
 
 }

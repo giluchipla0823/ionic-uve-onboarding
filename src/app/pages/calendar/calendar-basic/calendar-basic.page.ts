@@ -231,6 +231,8 @@ export class CalendarBasicPage implements OnInit {
       startOffset,
       endOffset,
     }
+
+
   }
 
 }

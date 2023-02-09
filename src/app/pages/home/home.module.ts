@@ -1,3 +1,4 @@
+import { PopoverSelectorComponent } from './popover-selector/popover-selector.component';
 import { ModalExamplePageModule } from './../modal-example/modal-example.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,8 +16,8 @@ import { HomePage } from './home.page';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    ModalExamplePageModule
+    ModalExamplePageModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, PopoverSelectorComponent],
 })
-export class HomePageModule { }
+export class HomePageModule {}

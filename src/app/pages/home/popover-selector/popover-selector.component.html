@@ -1,0 +1,11 @@
+<ion-content class="ion-padding">
+  <ion-item
+    *ngFor="let item of [].constructor(2); let i = index"
+    style="--padding-start: 5px"
+    [button]="true"
+    (click)="selectItem(i + 1)"
+  >
+    <ion-label>Text {{ i + 1 }}</ion-label>
+    <ion-badge color="primary" mode="ios">42</ion-badge>
+  </ion-item>
+</ion-content>

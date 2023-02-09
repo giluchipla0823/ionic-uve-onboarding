@@ -26,6 +26,14 @@ const routes: Routes = [
     path: 'calendar/calendar-custom-template',
     loadChildren: () => import('./pages/calendar/calendar-custom-template/calendar-custom-template.module').then(m => m.CalendarCustomTemplatePageModule)
   },
+  {
+    path: 'modal-pdf-viewer',
+    loadChildren: () => import('./pages/modal-pdf-viewer/modal-pdf-viewer.module').then( m => m.ModalPdfViewerPageModule)
+  },
+  {
+    path: 'download-files',
+    loadChildren: () => import('./pages/download-files/download-files.module').then( m => m.DownloadFilesPageModule)
+  },
 ];
 @NgModule({
   imports: [

@@ -8,19 +8,28 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+    quaerat molestias odio id fuga, quibusdam autem eum, nulla iste cupiditate
+    saepe repellat. Aliquam, voluptatibus hic officia fugit a consequatur
+    dolore.
+  </p>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat molestias odio id fuga, quibusdam autem eum, nulla iste cupiditate saepe repellat. Aliquam, voluptatibus hic officia fugit a consequatur dolore.</p>
+  <ion-button (click)="openModalExample()" expand="block">
+    Open Modal Example
+  </ion-button>
 
-  <ion-button (click)="openModal()" expand="block">
-    Open Modal
+  <ion-button (click)="openModalPDFViewer()" expand="block">
+    Open Modal PDF Viewer
   </ion-button>
 
   <ion-button (click)="loadDynamicComponent()" expand="block">
     Load Dynamic Component
   </ion-button>
 
-  <ion-button (click)="showLoading()" expand="block">
-    Load loading
-  </ion-button>
+  <ion-button (click)="showLoading()" expand="block"> Load loading </ion-button>
 
+  <ion-button (click)="showPopoverController($event)"
+    >Show popover controller</ion-button
+  >
 </ion-content>

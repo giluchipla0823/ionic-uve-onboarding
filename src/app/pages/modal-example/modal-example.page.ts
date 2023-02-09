@@ -7,16 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal-example.page.scss'],
 })
 export class ModalExamplePage implements OnInit {
+  constructor(private modalCtrl: ModalController) {}
 
-  constructor(
-    private modalCtrl: ModalController
-  ) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   close() {
     this.modalCtrl.dismiss();
   }
-
 }

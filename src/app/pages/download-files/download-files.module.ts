@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ModalExamplePageRoutingModule } from './modal-example-routing.module';
+import { DownloadFilesPageRoutingModule } from './download-files-routing.module';
 
-import { ModalExamplePage } from './modal-example.page';
+import { DownloadFilesPage } from './download-files.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ModalExamplePageRoutingModule,
+    DownloadFilesPageRoutingModule
   ],
-  declarations: [ModalExamplePage],
+  declarations: [DownloadFilesPage]
 })
-export class ModalExamplePageModule {}
+export class DownloadFilesPageModule {}

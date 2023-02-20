@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'download-files',
     loadChildren: () => import('./pages/download-files/download-files.module').then( m => m.DownloadFilesPageModule)
   },
+  {
+    path: 'parallax-header',
+    loadChildren: () => import('./pages/parallax-header/parallax-header.module').then( m => m.ParallaxHeaderPageModule)
+  },
 ];
 @NgModule({
   imports: [

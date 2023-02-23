@@ -8,40 +8,40 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label position="floating">Username</ion-label>
       <ion-input formControlName="username"></ion-input>
-      
     </ion-item>
 
-    <app-error-messages
-        [control]="form.controls.username"
-    ></app-error-messages>
+    <app-error-messages [control]="form.controls.username"></app-error-messages>
 
     <ion-item>
       <ion-label position="floating">Email</ion-label>
       <ion-input formControlName="email"></ion-input>
     </ion-item>
-    
-    <app-error-messages
-        [control]="form.controls.email"
-    ></app-error-messages>
+
+    <app-error-messages [control]="form.controls.email"></app-error-messages>
 
     <ion-item>
       <ion-label position="floating">Message</ion-label>
       <ion-input formControlName="message"></ion-input>
     </ion-item>
 
-    <app-error-messages
-        [control]="form.controls.message"
-    ></app-error-messages>
+    <app-error-messages [control]="form.controls.message"></app-error-messages>
 
     <ion-button class="btn-submit" type="submit" expand="block">
       Submit
     </ion-button>
   </form>
 
-  
+  <h1>Eventos</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let item of [].constructor(4)">
+      <ion-label>
+        <app-form-event-item></app-form-event-item>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

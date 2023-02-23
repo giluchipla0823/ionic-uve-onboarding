@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormEventItemService } from './form-event-item/form-event-item.service';
 
 @Component({
   selector: 'app-forms',
@@ -7,24 +8,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./forms.page.scss'],
 })
 export class FormsPage implements OnInit {
-
   form: FormGroup;
   customErrorMessages: Record<string, string> = {
     required: 'You... kind of need a username',
   };
 
   constructor(
-    private fb: FormBuilder
-  ) {
-
-  }
+    private fb: FormBuilder,
+    private formEventItemService: FormEventItemService
+  ) {}
 
   ngOnInit(): void {
     this.buildForm();
 
     this.form.get('username').valueChanges.subscribe((value) => {
       console.log('username', value);
-    })
+    });
+
+    this.formEventItemService.downloadItem$.subscribe((res) => {
+      console.log('QUE PASA AQUI', res);
+    });
   }
 
   onSubmit() {
@@ -43,5 +46,4 @@ export class FormsPage implements OnInit {
       message: ['', Validators.required],
     });
   }
-
 }

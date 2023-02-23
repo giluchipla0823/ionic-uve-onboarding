@@ -1,3 +1,4 @@
+import { FormEventItemComponent } from './form-event-item/form-event-item.component';
 import { ErrorMessagesModule } from './../../components/error-messages/error-messages.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,8 +18,8 @@ import { FormsPage } from './forms.page';
     FormsPageRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ErrorMessagesModule
+    ErrorMessagesModule,
   ],
-  declarations: [FormsPage]
+  declarations: [FormsPage, FormEventItemComponent],
 })
-export class FormsPageModule { }
+export class FormsPageModule {}

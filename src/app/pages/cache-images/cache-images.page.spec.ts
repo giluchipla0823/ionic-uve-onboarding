@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ParallaxHeaderPage } from './parallax-header.page';
+import { CacheImagesPage } from './cache-images.page';
 
-describe('ParallaxHeaderPage', () => {
-  let component: ParallaxHeaderPage;
-  let fixture: ComponentFixture<ParallaxHeaderPage>;
+describe('CacheImagesPage', () => {
+  let component: CacheImagesPage;
+  let fixture: ComponentFixture<CacheImagesPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ParallaxHeaderPage ],
+      declarations: [ CacheImagesPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ParallaxHeaderPage);
+    fixture = TestBed.createComponent(CacheImagesPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title> Cache Images </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="clearData()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+      <ion-button (click)="clearCache()">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full" (click)="loadProducts()">Load Products</ion-button>
+
+  <ion-card *ngFor="let p of products">
+    <!-- <img [src]="p.image" class="ion-padding" /> -->
+    <app-cache-image
+      [src]="p.image"
+      class="ion-padding"
+      [spinner]="false"
+    ></app-cache-image>
+    <ion-card-content>
+      <ion-label>
+        {{ p.title}}
+        <p>{{ p.price | currency: 'USD' }}</p>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

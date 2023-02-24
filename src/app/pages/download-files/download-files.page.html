@@ -1,16 +1,15 @@
 <ion-header>
   <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
     <ion-title> Download Files </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!-- <div
-    style="height: 10px; background: #ff0000"
-    [style.width]="downloadProgress + '%'"
-    *ngIf="downloadProgress"
-  ></div> -->
-
   <ion-item>
     <ion-input [(ngModel)]="downloadUrl"></ion-input>
   </ion-item>

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ParallaxHeaderPage } from './parallax-header.page';
+import { StorageCacheApiPage } from './storage-cache-api.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ParallaxHeaderPage
+    component: StorageCacheApiPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ParallaxHeaderPageRoutingModule {}
+export class StorageCacheApiPageRoutingModule {}

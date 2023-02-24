@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyCustomParallaxHeaderDirective } from './my-custom-parallax-header.directive';
-
 @NgModule({
-  declarations: [MyCustomParallaxHeaderDirective],
+  declarations: [],
   imports: [CommonModule],
-  exports: [MyCustomParallaxHeaderDirective],
+  exports: [],
 })
 export class DirectivesModule {}
